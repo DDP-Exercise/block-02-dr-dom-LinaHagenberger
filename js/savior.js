@@ -27,6 +27,15 @@
  * without the risk of catching an eye infection!
  */
 
+let allParagraphs = document.querySelectorAll("p");
+for (let paragraph of allParagraphs) {
+    paragraph.style.color = "white";
+    paragraph.style.backgroundColor = "grey";
+}
+
+let messageParagraph = document.getElementById("message");
+messageParagraph.style.color = "white";
+messageParagraph.style.backgroundColor = "#676767";
 
 
 
@@ -36,6 +45,8 @@
  * Can't we just remove them all together?
  */
 
+let allMinions = document.querySelector("ul");
+allMinions.remove();
 
 
 
@@ -45,6 +56,9 @@
  * And while at it, let the world know again, that they are back in town!
  */
 
+document.getElementById("heroes_of_the_web").style.visibility = "visible";
+alert("The heroes are back in town!");
+
 
 
 /**
@@ -52,6 +66,8 @@
  * Our Webpage is safe again! But Dr. Dom is still holding our Headline as a hostage!
  * Do your thing, savior!
  */
+
+document.querySelector("h1").textContent = "It's my Headline, Dr. Dom!"
 
 
 
@@ -63,3 +79,5 @@
  * It might sound paranoid. But I can't get rid of the feeling, that he is still here,
  * somewhere in the DOM. I can still feel his Code. Can you identify the source and remove it?
  */
+
+document.querySelector("script").remove();
