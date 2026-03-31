@@ -16,6 +16,22 @@
 
 //TODO: Place one object here.
 
+const SAVIOR = {
+    name: "Pixel",
+    age: "24",
+    location: "Berlin",
+    hobbies: ["Photography", "Traveling", "Coding"],
+    type_of_companion: "sarcastic Dragon",
+    companion: {
+        companion_name: "Blaze",
+        color: "emerald green",
+        mood: "Mildy amused",
+        horn_sharpness: "Occasionally explosive",
+        favorite_hobby: "Roasting bad jokes",
+        glitter_trail_status: "Fully operational",
+    }
+}
+
 /*******************************************************
  *   DO NOT CHANGE THE CODE BELOW!
  *******************************************************/

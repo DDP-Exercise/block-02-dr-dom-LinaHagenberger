@@ -68,3 +68,89 @@ const BATTLEFIELD =
 // Check Vertical
 // Check Main Diagonal
 // Check Anti Diagonal
+
+
+let size = BATTLEFIELD.length;
+let winner = null;
+
+// Check Horizontal
+
+for (let r = 0; r < size; r++) {
+    let first = BATTLEFIELD[r][0];
+    if (first == null) continue;
+
+    let win = true;
+
+    for (let c = 1; c < size; c++) {
+        if (BATTLEFIELD[r][c] !== first) {
+            win = false;
+        }
+    }
+
+    if (win) {
+        winner = first;
+        console.log(winner + " wins horizontally!");
+    }
+}
+
+// Check Vertical
+
+for (let c = 0; c < size; c++) {
+    let first = BATTLEFIELD[0][c];
+    if (first == null) continue;
+
+    let win = true;
+
+    for (let r = 1; r < size; r++) {
+        if (BATTLEFIELD[r][c] !== first) {
+            win = false;
+        }
+    }
+
+    if (win) {
+        winner = first;
+        console.log(winner + " wins vertically!");
+    }
+}
+
+// Check Main Diagonal
+
+let firstMain = BATTLEFIELD[0][0];
+if (firstMain != null) {
+    let win = true;
+
+    for (let r = 1; r < size; r++) {
+        if (BATTLEFIELD[r][r] !== firstMain) {
+            win = false;
+        }
+    }
+
+    if (win) {
+        winner = firstMain;
+        console.log(winner + " wins on main diagonal!");
+    }
+}
+
+// Check Anti Diagonal
+
+let firstAnti = BATTLEFIELD[0][size - 1];
+if (firstAnti != null) {
+    let win = true;
+
+    for (let r = 1; r < size; r++) {
+        if (BATTLEFIELD[r][size - 1 - r] !== firstAnti) {
+            win = false;
+        }
+    }
+
+    if (win) {
+        winner = firstAnti;
+        console.log(winner + " wins on anti-diagonal!");
+    }
+}
+
+// No winner
+
+if (winner == null) {
+    console.log("No winner yet!");
+}
